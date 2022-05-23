@@ -1,0 +1,9 @@
+click==8.0.4
+Flask==2.0.3
+gunicorn==20.1.0
+itsdangerous==2.1.1
+Jinja2==3.0.3
+MarkupSafe==2.1.1
+mysql-connector-python==8.0.28
+protobuf==3.19.4
+Werkzeug==2.0.3
