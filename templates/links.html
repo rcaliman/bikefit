@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="bg1">
+    <div class="container align-items-center">
+        <h3 class="text-center">{{ the_title.upper() }}</h3>
+        <p class="text-center">Os codigos deste site estao disponiveis no Github para uso livre.<br>
+        Qualquer duvida, critica ou sugestao podem ser enviadas pelo e-mail abaixo.</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col-sm">
+                        <a href='http://www.github.com/rcaliman/bikefit' class='btn btn-link' target="_blank" style='color:#2d2d30;'>Github</a>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col-sm">
+                        <a href='mailto:rcaliman@gmail.com' class='btn btn-link' target="_blank" style='color:#2d2d30;'>E-mail</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

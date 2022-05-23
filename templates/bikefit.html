@@ -1,0 +1,111 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form name="bikefit" method="post" action="resultados" class='needs-validation'>
+<div class="bg1">
+    <div class="container align-items-center">
+      <h3 class="text-center">{{ the_title.upper() }}</h3>
+      <p class="text-center">Digite com atencao suas medidas em CENTIMETROS e conforme as imagens.<br>Exemplo: em uma medida de 1 metro e 65 centimetros digite 165.</p>
+  
+      <ul class="list-group">
+        <li class="list-group-item text-center">
+            <div class="row align-items-center">
+                <div class="col text-end">
+			<p class='text-start'><texto_negrito># CAVALO</texto_negrito></p><img class='img-fluid' src="./static/img/cavalo.gif">
+                </div>
+                <div class="col text-start">
+		    <div class='input-group'>
+                        <input type='number' name="cavalo" class="form-control" style='max-width: 65px' required>
+			<span class='input-group-text'>cm</span>
+		    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col text-center self-align-center">
+                    <texto_medio>Cavalo: uma das medidas mais importantes para determinar o tamanho do quadro. Fique totalmente encostado na parede e use um livro ou algo do tipo entre as pernas, o mais alto que puder, para medir a distancia do chao ate o topo do objeto usado.</texto_medio>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col text-end">
+			<p class='text-start'><texto_negrito># ESTERNO</texto_negrito></p><img class='img-fluid' src="./static/img/esterno.gif">
+                </div>
+		<div class="col text-start">
+                    <div class='input-group'>
+                        <input type='number' name="esterno" class="form-control" style='max-width: 65px' required>
+                        <span class='input-group-text'>cm</span>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <texto_medio>Esterno: esta medida servira para, junto com o tamanho do bra&ccedil;o, determinar o comprimento total do quadro + mesa. Mede-se do chao ate a parte inferior da marca em V que temos acima do peito, onde fica o osso chamado esterno.</texto_medio>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col text-end">
+			<p class='text-start'><texto_negrito># BRA&Ccedil;O</texto_negrito></p><img class='img-fluid' src="./static/img/braco.gif">
+                </div>
+		<div class="col text-start">
+                    <div class='input-group'>
+                        <input type='number' name="braco" class="form-control" style='max-width: 65px' required>
+                        <span class='input-group-text'>cm</span>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col text-center">
+                    <texto_medio>Bra&ccedil;o: estique o bra&ccedil;o com o polegar para cima para medir conforme a foto ao lado.</texto_medio>
+                </div>
+            </div>
+        </li>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col-12 text-center mt-1">
+			    <p><texto_negrito># E-MAIL</texto_negrito></p>
+			    <div class='input-group justify-content-center'>
+			    	<input type='email' name="email" class="form-control" style='max-width: 400px'>
+			    </div>	
+                        <p>(apenas se quiser recuperar seu calculo mais tarde)</p>
+			<div class='alert alert-success alert-dismissible show fade'>
+            <b>Muito importante</b>: este bikefit virtual usa uma formula simples e consagrada mas deve ser
+            entendido apenas como ponto de partida para quem quer estar bem posicionado em cima de uma bicicleta. Sempre que possivel contatem um profissional,
+                seja para adquirir uma nova bicicleta ou para estar confortavel na que voce ja tem. Nao existem dois corpos exatamente iguais, entao mesmo duas
+        pessoas com as mesmas medidas podem ter sensacoes diferentes em cima da mesma bike.
+                Contatem um profissional especialmente se continuarem a sentir dores ou desconforto após aplicar as medidas calculadas aqui.
+        <button type='button' data-bs-dismiss='alert' class='btn-close'></button>
+<center style='padding-top: 5px;'><texto_pequeno>* O chamado metodo LeMond, usado aqui, 
+foi criado pelo tri-campeao do Tour de France Greg Lemond.</texto_pequeno></center>
+        </div>
+
+                    </div>
+                </div>
+            </li>
+      </ul>
+    </div>
+</div>
+<div class="bg1" style="padding: 20px">
+    <div class="container align-items-center">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col text-center">
+			    <button class="btn btn-success">enviar medidas para calculo</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</form>
+{% endblock %}

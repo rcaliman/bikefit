@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form name="bikefit" method="post" action="resultadosanteriores" class='needs-validation'>
+<div class="bg1">
+    <div class="container align-items-center">
+      <h3 class="text-center"> {{ the_title.upper() }}</h3>
+      <p class="text-center">Digite seu e-mail e clique em buscar para pesquisar calculos feitos anteriormente.</p>
+  
+      <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col">
+		    <div class='input-group d-flex justify-content-center'>
+			<input type="email" name="email" class="form-control" style='max-width: 400px' required placeholder='digite aqui seu e-mail e clique em "buscar"'>
+			<button value='enviar' class="btn btn-success">buscar</button>
+		    </div>
+                </div>
+            </div>
+        </li>
+</div>
+</form>
+{% endblock %}

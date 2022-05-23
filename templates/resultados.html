@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="bg1">
+    <div class="container align-items-center">
+        <h3 class="text-center">{{ the_title.upper() }}</h3>
+        <p class="text-center">Este bike fit foi concebido de acordo com o metodo LeMond, e seguindo as especificacoes <a href=https://www.competitivecyclist.com/docs/competitivecyclist/fitcal/road-fit.pdf>deste documento</a>.</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <center>Cavalo: <texto_resultado>{{ cavalo }}</texto_resultado> cm</center>
+                    </div>
+                    <div class="col">
+                        <center>Tronco ({{ esterno }} - {{ cavalo }}): <texto_resultado>{{ tronco }}</texto_resultado> cm</center>
+                    </div>
+                    <div class="col">
+                        <center>Bra&ccedil;os: <texto_resultado>{{ braco }}</texto_resultado> cm</center>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img class='img-fluid' src="./static/img/seattube.gif">
+                    </div>
+                    <div class="col">
+                        <texto_negrito>Tamanho do seu quadro:</texto_negrito><br>
+                        <texto>Speed: </texto><texto_resultado>{{ quadroSpeed }}</texto_resultado>
+                        <texto>MTB:</texto><texto_resultado>{{ quadroMTB }}</texto_resultado>
+                    </div>
+                    <div class="col">
+                        <texto_medio>A maioria dos fabricantes definem o tamanho do quadro pela distancia entre a central e o topo do tubo do selim (seat tube). O numero apresentado aqui deve ser usado como referencia, podendo ter variacoes para menos ou para mais de acordo com o fabricante e/ou suas preferencias pois, em geral, um quadro menor te permite ter mais agilidade, enquanto um maior concede mais conforto.</texto_medio>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img class='img-fluid' src="./static/img/seat.gif">
+                    </div>
+                    <div class="col">
+                        <texto_negrito>Altura do selim:</texto_negrito>
+                        <texto_resultado>{{ alturaSelim }}</texto_resultado>
+                    </div>
+                    <div class="col">
+                        <texto_medio>Mede-se da central ao topo do selim, conforme a marca laranja no desenho. A altura pode variar entre 1 e 2 cm, para menos ou para mais, de acordo com a preferencia do ciclista.</texto_medio>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <img class='img-fluid' src="./static/img/toptube.gif">
+                    </div>
+                    <div class="col">
+                        <texto_negrito>Top tube efetivo + mesa:</texto_negrito>
+                        <texto_resultado>{{ topTubeEfetivo }}</texto_resultado>
+                    </div>
+                    <div class="col">
+                        <texto_medio>Aqui temos a distancia do canote do selim ao guidao, ou seja, a soma do chamado top tube efetivo + a mesa. Tenha muita atencao com essa medida para evitar que o ciclista fique muito encolhido, ou muito esticado, em cima da bike, garantindo assim melhor performance e conforto, sem prejudicar sua saude fisica.</texto_medio>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <center><texto_medio>* O top tube efetivo merece tanta ou mais atencao na configuracao de uma bike quanto o seat tube. Nunca deixe de leva-lo em consideracao na hora da compra. A maioria dos fabricantes divulga a tabela de geometria de seus quadros.</texto_medio></center>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class='bg1 mt-3 mb-3'> 
+	<div class='container'>
+    	<ul class="list-group">
+			<li class="list-group-item">
+				<div class='input-group d-flex justify-content-center'>
+					<a target=# class='form-control btn btn-success' style='max-width: 500px;' href='muraldemensagens'>quer comentar seus resultados no nosso mural?</a>
+				</div>
+	    	</li>
+    	</ul>
+	</div>
+</div>
+{% endblock %}

@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Um bikefit virtual facil, leve e sem propagandas.</title>
+        <meta http-equiv="cache-control" content="max-age=0" />
+        <meta http-equiv="cache-control" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
+        <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> 
+        <meta name="author" content="Rodrigo Caliman">
+        <meta name="description" content="Um bikefit virtual simples e facil de preencher usando as formulas criadas pelo tri campeao do Tour de France, Greg LeMond. Desde 2010 no ar para ajudar a todos os ciclistas que precisarem.">
+        <meta name="keywords" content="bike bikefit fit bicicleta medidas tamanho postura posicao pedalar pedal pedalando dores dor">
+        <meta charset="utf-8">
+	<link rel='stylesheet' type='text/css' href='./static/css/bootstrap.min.css'>
+        <script type='text/javascript' src='./static/js/bootstrap.min.js'></script>
+        <style>
+	    	contador {padding-left:15px;color:#d1d2d3; font-style: normal; font-size:small;font-family: 'Varela Round', sans-serif;}
+			ul {background: #fbfefb;}
+			button { cursor: pointer; }
+			.topo {
+					padding: 10px 0;
+					position: relative;
+					background-color: #313134;
+			}
+			.nav {font-family: 'Varela Round', sans-serif;background-color: #313134;}
+			.nav-link {font-family: 'Varela Round', sans-serif;color: #bdbdbd;}
+			.nav-link:hover {color:#2f8754;}
+            .bg1 {
+              background: #2d2d30;
+              color: #bdbdbd;
+			  font-family: 'Varela Round', sans-serif;
+            }
+            .bg1 h3 {-webkit-text-stroke: 1px black;padding-top: 30px; padding-bottom: 8px; font-weight: bold;}
+            .bg1 p {font-style: normal; font-size: 14px;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto {padding: 4px;color:#2d2d30; font-style: normal;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto_negrito {padding: 4px;color:#6a6b6b; font-style: normal;font-weight: bold;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto_resultado {padding: 4px;color: #39bdac; font-style: normal; font-weight: bold;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto_claro {padding: 4px;color:#d1d2d3; font-style: normal;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto_pequeno {padding:0px;color:#6a6b6b; font-style: normal; font-size:small;font-family: 'Varela Round', sans-serif;}
+            .bg1 texto_medio {padding:4px;color:#6a6b6b; font-style: normal; font-size:medium;font-family: 'Varela Round', sans-serif;}
+            .bg1 a {font-family: 'Varela Round', sans-serif;color:rgb(253, 222, 165)}
+            .botao_cor {background-color: #d1d2d3;color:#2d2d30; border-style:dotted}
+            .input_fit {border-color:#39bdac;border-width: 2px;border-style:dotted;padding:2px}
+        </style>
+    </head>
+    <body style="background-color: #2d2d30;">
+<header class='shadow mt-3 topo'>	
+	<div class='row'>
+	<div class='col-4 align-self-center'>
+	<ul class='nav justify-content-start'>
+	<li class='nav-item'>
+		{% if dia > 1 %}
+    		<contador>Seja bem vindo(a). Ja fizemos {{dia}} calculos hoje! :)</contador>
+		{% endif %}
+	</li>
+	</ul>
+	</div>
+	<div class='col-8'>
+	<ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">bikefit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="buscaranteriores">calculos anteriores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="muraldemensagens">mural de mensagens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="links">links</a>
+            </li>
+	          <li class="nav-item">
+              <a class="nav-link active" href="sobre">sobre</a>
+            </li>
+            <li>
+        </ul>
+	</div>
+</div>
+</header>
+        {% block body %}
+
+        {% endblock %}
+    </body>
+</html>

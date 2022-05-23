@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<form name="bikefit" method="post" action="resultadosanteriores">
+<div class="bg1">
+    <div class="container align-items-center">
+      <h3 class="text-center"> {{ the_title.upper() }}</h3>
+      <ul class="list-group">
+        <li class="list-group-item">
+            <div class="row align-items-center">
+                <div class="col align-items-center text-right">
+                    <center><table class='table-bordered'>
+                        <tr>
+                            <th class='p-1 text-center'>Data</th>
+                            <th class='p-1 text-center'>Cavalo</th>
+                            <th class='p-1 text-center'>Esterno</th>
+                            <th class='p-1 text-center'>Braco</th>
+                            <th class='p-1 text-center'>Tronco</th>
+                            <th class='p-1 text-center'>Quadro de Speed</th>
+                            <th class='p-1 text-center'>Quadro de MTB</th>
+                            <th class='p-1 text-center'>Altura do Selim</th>
+                            <th class='p-1 text-center'>Top Tube Efetivo</th>
+                        </tr>
+                    {% for a in resultado %}
+                    <tr>
+                        {% for b in a %}
+                            <td class='text-right p-1'>{{ b }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                
+                    </table></center>
+                </div>
+            </div>
+        </li>
+</div>
+</form>
+{% endblock %}

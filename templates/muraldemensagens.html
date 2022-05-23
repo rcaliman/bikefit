@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form name="muraldemensagens" method="POST" action="muraldemensagens" class='needs-validation'>
+<div class="bg1">
+    <div class="container align-items-center">
+        <h3 class="text-center">{{ the_title.upper() }}</h3>
+        <p class="text-center">Deixem suas mensagens, duvidas e criticas construtivas. Por favor, tenham cortesia e educacao.</p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                 <div class='row'>
+                     <div class='col'>
+                         <div class='input-group mt-3 d-flex justify-content-center'>
+                             <input type='text' required placeholder='seu nome' name='nome' class='form-control' style='max-width: 500px;'>
+                         </div>
+                         <div class='input-group mt-3 d-flex justify-content-center'>
+                             <input type='email' required placeholder='seu e-mail'name='email' class='form-control' style='max-width: 500px;'>
+                         </div>
+                         <div class='input-group mt-3 d-flex justify-content-center'>
+                             <textarea name='mensagem' required rows=4 class='form-control' placeholder='sua mensagem'  style='max-width: 500px;'></textarea>
+                         </div>
+                         <div class='input-group mt-3 d-flex justify-content-center'>
+                             <button class='form-control btn btn-success' style='max-width: 500px;'>clique aqui para postar</button>
+                         </div>
+                    </div>
+                </div>
+            </li>
+</form>
+{{ x }}
+            {% for a in mensagens %}
+                <li class="list-group-item text-center">
+                    <texto>{{ a[3] }}</texto>
+                    <p><texto_pequeno>{{ a[0] }} - <a href=mailto:{{a[2]}} style='color:#2d2d30';>{{ a[1] }}</a></texto_pequeno></p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
